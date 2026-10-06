@@ -5,14 +5,14 @@
 void shuffle(uint8_t *list, uint16_t list_size);
 
 void shuffle(uint8_t *list, uint16_t list_size) {
-
+    //Mikäli taulukko sisältää vain yhden alkion, paha mennä sekoittamaan :)
     if (list_size <= 1) {
         return;
     }
-
+    //Alustetaan temp-taulukko ja remaining muuttuja.
     uint8_t temp[list_size];
     uint16_t remaining = list_size;
-
+    //Kopioidaan alkuperäisen taulukon alkiot temp-taulukkoon.
     for (uint16_t i = 0; i < list_size; i++) {
         temp[i] = list[i];
     }
